@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>menulateral</title>
+    <link rel="stylesheet" href="stylo.css">
+  </head>
+  <body>
+    <nav>
+      <div id="corpomenu" class="corpomenu">
+        <div class="cabecaliomenu">
+          <p class="nomemenu">Menu</p>
+          <div class="botao" onclick="menu()"></div>
+        </div>
+      <div class="listmenu">
+        <ul>
+          <li><a href="#">home</a> </li>
+          <li><a href="#">home1</a> </li>
+          <li><a href="#">home2</a> </li>
+          <li><a href="#">home3</a> </li>
+        </ul>
+      </div>
+    </div>
+    <script>
+      function menu() {
+        var estado = document.getElementsByClassName('corpomenu')[0]; // Access the first element with the class 'corpomenu'
+        var stilo = estado.style.animationName;
+        var bot = document.getElementsByClassName('botao')[0];
+            if (stilo === 'lateralopem') {
+              estado.style.animationName = 'lateralclose';
+              estado.style.marginLeft = '-250px';
+              bot.style.backgroundImage = 'url(menu.png)';
+              bot.style.animationName = 'linha1';
+          } else {
+              estado.style.animationName = 'lateralopem';
+              estado.style.marginLeft = '0px';
+              bot.style.backgroundImage = 'url(fechamenu.png)';
+              bot.style.animationName = 'linha2';
+          }
+        }
+
+      </script>
+    </nav>
+  </body>
+</html>
